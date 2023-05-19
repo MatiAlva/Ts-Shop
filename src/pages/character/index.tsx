@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { characters } from '../../api/characters'
 import { ICharacter } from './interface/character.interface'
-import {Box, CircularProgress, Container, Grid, Typography, Divider, Chip} from '@mui/material'
+import {Box, CircularProgress, Container, Grid, Typography, Divider, Chip, colors} from '@mui/material'
 
 export const CharacterPage:React.FC = () => {
     const {id} = useParams()
@@ -29,8 +29,8 @@ export const CharacterPage:React.FC = () => {
                     </Box>
                 ) 
                 : (
-                <Grid container columnSpacing={2} sx={{mt:2}}>
-                    <Grid item xs={5}>
+                <Grid container columnSpacing={2} sx={{mt:2, display: 'flex', justifyContent:'space-around', flexDirection:'column'}}>
+                    <Grid item xs={5} sm={12}>
                         <Typography variant='h1'>{character!.name}</Typography>
                         <Divider />
                         <Typography variant='h6'>{character!.origin.name}</Typography>
@@ -42,7 +42,7 @@ export const CharacterPage:React.FC = () => {
                             />
                         </Box>
                     </Grid>
-                    <Grid item xs={5} sm={4}>
+                    <Grid item xs={8} sx={{mt:3}}>
                         <img src={character!.image} alt={character!.name} style={{width: '100%', borderRadius: '0.5em'}}/>
                     </Grid>
                 </Grid>
