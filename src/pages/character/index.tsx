@@ -42,7 +42,7 @@ export const CharacterPage:React.FC = () => {
                             />
                         </Box>
                     </Grid>
-                    <Grid item xs={8} sx={{mt:3}}>
+                    <Grid item xs={3} sm={5} sx={{mt:3}}>
                         <img src={character!.image} alt={character!.name} style={{width: '100%', borderRadius: '0.5em'}}/>
                     </Grid>
                 </Grid>
