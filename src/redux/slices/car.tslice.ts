@@ -1,4 +1,3 @@
-import { InsertEmoticon } from '@mui/icons-material'
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { getItem } from '../../utils/localStorage'
