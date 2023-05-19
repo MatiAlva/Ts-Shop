@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { characters } from '../../api/characters'
 import { ICharacter } from './interface/character.interface'
-import {Box, CircularProgress, Container, Grid, Typography, Divider, Chip, colors} from '@mui/material'
+import {Box, CircularProgress, Container, Grid, Typography, Divider, Chip} from '@mui/material'
 
 export const CharacterPage:React.FC = () => {
     const {id} = useParams()
